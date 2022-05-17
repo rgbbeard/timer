@@ -1,7 +1,7 @@
 SystemFn(function() {
 	let ms_d = _("#millisecs"), s_d = _("#seconds"), m_d = _("#minutes"), h_d = _("#hours");
 	let ms = 0, s = 0, m = 0, h = 0;
-	let timer = null, can_stop = false, audio = new Audio("res/audio/alarm_tone_1.mp3");
+	let timer = null, audio = new Audio("res/audio/alarm_tone_1.mp3");
 
 	function editable() {
 		ms_d.setAttribute("contenteditable", true);
@@ -37,7 +37,6 @@ SystemFn(function() {
 		if(!isDeclared(timer)) {
 			notEditable();
 			this.txt("Stop");
-			can_stop = true;
 
 			timer = setInterval(function() {
 				ms_d.txt(ms);
@@ -91,7 +90,6 @@ SystemFn(function() {
 			}, 10);
 		} else {
 			this.txt("Start");
-			can_stop = false;
 			stopTimer();
 		}
 	});
