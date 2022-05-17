@@ -28,7 +28,7 @@
 		</div>
 		<div id="actions-container">
 			<a id="start" class="btn-ripple success">Start</a>
-			<a id="reset" class="btn-ripple warning">Reset</a>
+			<a id="reset" class="btn-ripple error">Reset</a>
 		</div>
 	</body>
 </html>
